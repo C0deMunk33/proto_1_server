@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "proto_1"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask = "^3.0.3"
+Flask-Cors = "^4.0.1"
+requests = "^2.32.3"
+pytesseract = "^0.3.10"
+llama-cpp-python = "^0.2.81"
+pdfplumber = "^0.11.2"
+sentence-transformers = "^3.0.1"
+scipy = "^1.14.0"
+pdf2image = "^1.17.0"
+PyPDF2 = "^3.0.1"
+psutil = "^6.0.0"
+Faker = "^30.3.0"
+pymilvus = "^2.4.7"
+web3 = "^7.4.0"
+eth-account = "^0.13.4"
+qiskit = "^1.2.4"
+qiskit-aer = "^0.15.1"
+qiskit-ibm-provider = "^0.11.0"
+matplotlib = "^3.9.2"
+qiskit-ibm-runtime = "^0.31.0"
+pygame = "^2.6.1"
+discord = "^2.3.2"
+nest-asyncio = "^1.6.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
