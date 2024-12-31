@@ -253,18 +253,16 @@ def create_app():
         messages = data['messages']
         grammar_text = data.get('grammar')
         temperature = data.get('temperature')
+        grammar_schema = data.get('grammar_schema')
 
         # get model path from data if it exists
         model_path = data.get('model_path', model_path)
-        print("~" * 100)
-        print ("model_path")
-        print(model_path)
-        print("~" * 100)
         grammar = None
         if grammar_text and len(grammar_text) > 0:
-            print("grammar_text")
-            print(grammar_text)
             grammar = LlamaGrammar.from_string(grammar_text, verbose=True)
+
+        if grammar_schema:
+            grammar = LlamaGrammar.from_schema(grammar_schema, verbose=True
 
         try:
             if temperature is not None:
