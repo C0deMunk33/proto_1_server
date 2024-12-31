@@ -262,7 +262,7 @@ def create_app():
             grammar = LlamaGrammar.from_string(grammar_text, verbose=True)
 
         if grammar_schema:
-            grammar = LlamaGrammar.from_schema(grammar_schema, verbose=True)
+            grammar = LlamaGrammar.from_json_schema(grammar_schema, verbose=True)
 
         try:
             if temperature is not None:
