@@ -36,7 +36,8 @@ def get_first_available_model(base_path: str, model_names: list[str]) -> str:
         path = Path(base_path) / name
         if path.is_file():
             return str(path)
-    raise FileNotFoundError(f"No available model found in {base_path}")
+    logging.info(f"No available models found in {base_path} with names: {model_names}")
+    return None
 
 text_models = [
     "Rombos-LLM-V2.6-Qwen-14b-Q8_0.gguf",
